@@ -5,7 +5,7 @@ import { ViewService } from './view.service';
 @Controller('/')
 export class ViewController {
   private readonly logger = new Logger(ViewController.name);
-  constructor(private viewService: ViewService) {}
+  constructor(private readonly viewService: ViewService) {}
 
   @Get('*')
   handleNext(@Req() req: Request, @Res() res: Response) {
